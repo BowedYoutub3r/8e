@@ -1,7 +1,7 @@
 var app = require("express")();
-var http = require("http").Server(app);
+var http = require("https").Server(app);
 var fs = require("fs");
-var io = require("socket.io")(http);
+var io = require("socket.io")(https);
 
 // handling files
 app.get('/', onRequest);
